@@ -19,8 +19,10 @@ connections, hosts, api-keys etc.
 
 Then, in a terminal, you can use `docker-compose up` to start the Postgresql database.
 
-In a second terminal, you can use `dotnet watch run` to start the server with
+In a second terminal, you can use `dotnet restore` to install all packages
+specified in the `imageboard-server.csproj` file.
+
+When the installation is over, you can use `dotnet watch run` to start the server with
 hot-reloading. Whenever you change a file in imageboard-server, the server will
 restart (Might have to wait a second or two)
-
 
