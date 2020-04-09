@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using dotenv.net;
 
 namespace imageboard_server
 {
@@ -18,6 +19,9 @@ namespace imageboard_server
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            // Read values in .env and make them accessible using
+            // Environment.GetEnvironmentVariable("DB_HOST");
+            DotEnv.Config();
         }
 
         public IConfiguration Configuration { get; }
